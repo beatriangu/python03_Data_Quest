@@ -20,7 +20,7 @@ El programa interpreta la intención del usuario a partir de los argumentos
 recibidos por la línea de comandos, accesibles mediante sys.argv.
 
 En este módulo, los argumentos representan directamente los datos que el programa
-debe procesar (por ejemplo, puntuaciones).
+debe procesar (por ejemplo, puntuaciones o coordenadas).
 
 3. ¿Por qué sys.argv siempre tiene al menos un elemento?
 
@@ -56,7 +56,7 @@ el archivo cuando se lanza directamente como script (por ejemplo, python3).
 
 Está relacionado con la ejecución del archivo y no con los import de Python.
 
-7. ¿Por qué se importa sys en este ejercicio?
+7. ¿Por qué se importa sys en este módulo?
 
 Porque el módulo sys proporciona acceso a sys.argv, que es el mecanismo
 estándar en Python para recibir argumentos desde la línea de comandos.
@@ -87,3 +87,114 @@ informar al usuario de forma clara y sencilla
 El subject no especifica si el programa debe continuar o terminar tras detectar
 un error; por ello, una salida controlada con un mensaje claro es una opción
 válida y alineada con el enunciado.
+
+10. ¿Por qué se usan tuplas para representar coordenadas 3D?
+
+Las tuplas son adecuadas para representar coordenadas 3D porque:
+
+agrupan valores relacionados (x, y, z) en una sola estructura
+
+son inmutables, lo que evita modificaciones accidentales
+
+representan correctamente un punto fijo en el espacio
+
+Esto hace que las tuplas sean claras, seguras y semánticamente apropiadas para
+este tipo de datos.
+
+11. ¿Qué es el unpacking de una tupla y por qué mejora la legibilidad?
+
+El unpacking permite asignar directamente los valores de una tupla a variables
+individuales:
+
+x, y, z = position
+
+
+Esto mejora la legibilidad porque:
+
+evita acceder por índices (position[0], position[1], etc.)
+
+deja claro qué representa cada valor
+
+hace el código más expresivo y fácil de entender
+
+12. ¿Qué hace la función parse_coordinates?
+
+La función parse_coordinates convierte una cadena con formato "x,y,z" en una
+tupla de enteros (x, y, z).
+
+Para ello:
+
+separa la cadena usando split(",")
+
+convierte cada parte a int
+
+devuelve una tupla con los valores resultantes
+
+Si la conversión falla (por ejemplo, "abc"), se lanza una excepción que se
+gestiona posteriormente de forma graceful.
+
+13. ¿Por qué se usa math.sqrt() en el cálculo de la distancia?
+
+math.sqrt() se utiliza para calcular la raíz cuadrada, necesaria en la
+fórmula de la distancia euclídea en 3D:
+
+(
+𝑥
+2
+−
+𝑥
+1
+)
+2
++
+(
+𝑦
+2
+−
+𝑦
+1
+)
+2
++
+(
+𝑧
+2
+−
+𝑧
+1
+)
+2
+(x
+2
+	​
+
+−x
+1
+	​
+
+)
+2
++(y
+2
+	​
+
+−y
+1
+	​
+
+)
+2
++(z
+2
+	​
+
+−z
+1
+	​
+
+)
+2
+	​
+
+
+El módulo math proporciona esta función de forma precisa y estándar.
