@@ -1,0 +1,89 @@
+FAQ – Python Module 03: Data Quest
+
+====================================
+
+Este documento recoge aclaraciones conceptuales clave del módulo Python03 – Data Quest.
+Sirve como apoyo para la comprensión del subject y para facilitar la explicación
+durante la evaluación. No forma parte de la entrega.
+
+1. ¿Qué es sys.argv?
+
+sys.argv es una lista que contiene los argumentos pasados al programa desde la
+línea de comandos.
+
+El primer elemento (sys.argv[0]) es siempre el nombre del archivo ejecutado, y
+los elementos siguientes son los argumentos proporcionados por el usuario.
+
+2. ¿Cómo sabe el programa qué quiere hacer el usuario?
+
+El programa interpreta la intención del usuario a partir de los argumentos
+recibidos por la línea de comandos, accesibles mediante sys.argv.
+
+En este módulo, los argumentos representan directamente los datos que el programa
+debe procesar (por ejemplo, puntuaciones).
+
+3. ¿Por qué sys.argv siempre tiene al menos un elemento?
+
+Porque Python incluye automáticamente el nombre del programa ejecutado como
+primer elemento de sys.argv, incluso cuando no se pasan argumentos adicionales.
+
+4. ¿Para qué sirve if __name__ == "__main__":?
+
+Sirve para garantizar que el código principal se ejecute solo cuando el
+archivo se lanza directamente como programa, y no cuando se importa como módulo
+desde otro archivo.
+
+Esto permite separar la lógica del programa de su punto de entrada.
+
+5. ¿Es obligatorio usar if __name__ == "__main__"?
+
+No siempre es obligatorio según el subject.
+
+Sin embargo, es una buena práctica profesional porque:
+
+permite controlar el flujo de ejecución
+
+facilita la reutilización del código
+
+evita ejecuciones accidentales al importar un archivo
+
+prepara el código para crecer o escalar
+
+6. ¿Qué es el shebang (#!) y por qué se usa?
+
+El shebang indica al sistema operativo qué intérprete debe utilizar para ejecutar
+el archivo cuando se lanza directamente como script (por ejemplo, python3).
+
+Está relacionado con la ejecución del archivo y no con los import de Python.
+
+7. ¿Por qué se importa sys en este ejercicio?
+
+Porque el módulo sys proporciona acceso a sys.argv, que es el mecanismo
+estándar en Python para recibir argumentos desde la línea de comandos.
+
+Sin sys, el programa no podría leer los datos introducidos por el usuario.
+
+8. ¿Cuál es la diferencia entre un script y un módulo?
+
+Un script está pensado para ejecutarse directamente.
+
+Un módulo está pensado para ser importado y reutilizado desde otros archivos.
+
+Un mismo archivo puede cumplir ambos roles si se estructura correctamente
+(utilizando funciones y if __name__ == "__main__":).
+
+9. ¿Qué significa manejar errores gracefully según el subject?
+
+Manejar errores gracefully significa que el programa debe:
+
+capturar los errores en lugar de crashear
+
+evitar mensajes de error no controlados (tracebacks)
+
+mantener un flujo de ejecución predecible
+
+informar al usuario de forma clara y sencilla
+
+El subject no especifica si el programa debe continuar o terminar tras detectar
+un error; por ello, una salida controlada con un mensaje claro es una opción
+válida y alineada con el enunciado.

@@ -1,0 +1,128 @@
+FLO – Feedback & Learning Observations
+
+========================================
+
+Este documento recoge reflexiones personales, comparaciones y aprendizajes
+derivados del desarrollo del módulo Python03 – Data Quest.
+No forma parte de la entrega, sino que sirve como apoyo para consolidar conceptos
+y mejorar la capacidad de explicación durante la evaluación.
+
+1. Diferentes enfoques, mismo resultado
+
+Mi compañero y yo hemos resuelto los ejercicios utilizando enfoques distintos.
+En ambos casos, los programas funcionan correctamente y cumplen el subject,
+lo que demuestra que Python permite múltiples soluciones válidas para un mismo
+problema.
+
+Esta comparación ha sido útil para analizar no solo qué funciona, sino cómo
+y por qué se toman determinadas decisiones de diseño dentro de los límites del
+enunciado.
+
+2. Uso de if __name__ == "__main__":
+
+Mi compañero no suele utilizar la estructura
+if __name__ == "__main__":, ya que sus archivos están pensados para ejecutarse
+directamente y no para ser importados como módulos.
+
+Su código funciona correctamente en este contexto y respeta el subject.
+No obstante, he aprendido que utilizar esta estructura:
+
+mejora la claridad del flujo de ejecución
+
+permite reutilizar funciones desde otros archivos
+
+evita ejecuciones accidentales al importar un módulo
+
+refleja una mentalidad más escalable y profesional
+
+Por este motivo, he decidido adoptarla como práctica habitual siempre que no
+entre en conflicto con las reglas del proyecto.
+
+3. Código en global vs función main()
+
+Para ejercicios simples, escribir el código directamente en el ámbito global
+es suficiente y perfectamente válido.
+
+Sin embargo, separar la lógica principal en una función (main() u otra similar):
+
+facilita la lectura del código
+
+mejora el control del flujo de ejecución
+
+prepara el programa para crecer o reutilizarse
+
+encaja mejor con el uso de if __name__ == "__main__":
+
+En mis soluciones he optado por esta separación de forma consciente, aunque
+el subject no la exija explícitamente.
+
+4. while vs for
+
+En Ex0, mi compañero utiliza un bucle while con control manual de índices.
+Yo utilizo un bucle for iterando directamente sobre los argumentos.
+
+Ambos enfoques son correctos:
+
+El while demuestra un control explícito del flujo y de los índices.
+
+El for expresa mejor la intención del código y es más idiomático en Python.
+
+Esta diferencia refleja estilos distintos más que errores o aciertos absolutos.
+
+5. Ex1 – Manejo de errores y alcance del graceful handling
+
+En Ex1, mi compañero convierte los argumentos a int dentro de un bloque
+try/except. Si aparece un valor inválido (por ejemplo, "banana"), el programa
+muestra un mensaje y termina de forma controlada.
+
+Este comportamiento cumple exactamente el subject, que únicamente indica que
+los errores deben manejarse gracefully, es decir, sin que el programa falle o
+muestre errores no controlados.
+
+A partir de esta implementación, he reflexionado sobre posibles alternativas,
+como ignorar valores inválidos y continuar el análisis con los datos correctos.
+Sin embargo, estas alternativas no son exigidas por el subject y suponen una
+interpretación adicional.
+
+Por este motivo, para ajustarme al subject al 100%, he priorizado un comportamiento
+conservador, predecible y fácil de evaluar: detectar el error, informar y salir
+de forma controlada.
+
+También he observado que:
+
+El formato del output (banner, textos y valores mostrados) puede ser relevante
+durante la evaluación.
+
+Mantener el formato natural de los resultados facilita ajustarse al ejemplo
+proporcionado en el enunciado.
+
+Estas observaciones no invalidan ninguna de las soluciones, sino que ayudan a
+entender mejor los límites y expectativas del subject.
+
+6. Aprendizajes clave
+
+No existe una única forma correcta de programar.
+Lo importante es que el código:
+
+funcione correctamente
+
+sea legible
+
+pueda explicarse con claridad en una evaluación
+
+respete estrictamente las reglas del subject
+
+Comparar enfoques me ha ayudado a entender mejor cuándo es apropiado aplicar
+mejoras de diseño y cuándo es preferible optar por una solución más conservadora.
+
+7. Conclusión personal
+
+A lo largo de este módulo he aprendido a equilibrar buenas prácticas y claridad
+con el respeto estricto al subject. He decidido priorizar soluciones simples,
+predecibles y alineadas con el enunciado, dejando las mejoras más avanzadas como
+reflexión y aprendizaje personal.
+
+Este proceso de comparación me ha permitido afianzar conceptos y ganar seguridad
+a la hora de justificar mis decisiones técnicas de forma clara y coherente.
+
+
