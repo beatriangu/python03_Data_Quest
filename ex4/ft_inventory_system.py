@@ -21,8 +21,8 @@ def show_inventory(player_name: str, inventory: dict) -> tuple:
         categories[category] = categories.get(category, 0) + quantity
 
         print(
-            f"{item_name} ({category}, {rarity}): {quantity}x @ {value} gold each = "
-            f"{item_total} gold"
+            f"{item_name} ({category}, {rarity}): {quantity}x "
+            f"@ {value} gold each = {item_total} gold"
         )
 
     print()
@@ -96,7 +96,12 @@ def main() -> None:
     print("=== Player Inventory System ===\n")
 
     alice = {
-        "sword": {"category": "weapon", "rarity": "rare", "quantity": 1, "value": 500},
+        "sword": {
+            "category": "weapon",
+            "rarity": "rare",
+            "quantity": 1,
+            "value": 500,
+        },
         "potion": {
             "category": "consumable",
             "rarity": "common",

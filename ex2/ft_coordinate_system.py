@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import sys
 import math
 
 
@@ -54,14 +53,20 @@ def main() -> None:
 
     position = create_position(10, 20, 5)
     print(f"Position created: {position}")
-    print(f"Distance between {origin} and {position}: {fmt_dist(origin, position)}")
+    print(
+        f"Distance between {origin} and {position}: "
+        f"{fmt_dist(origin, position)}"
+    )
     print()
 
     valid_str = "3,4,0"
     print(f'Parsing coordinates: "{valid_str}"')
     parsed = parse_coordinates(valid_str)
     print(f"Parsed position: {parsed}")
-    print(f"Distance between {origin} and {parsed}: {fmt_dist(origin, parsed)}")
+    print(
+        f"Distance between {origin} and {parsed}: "
+        f"{fmt_dist(origin, parsed)}"
+    )
     print()
 
     invalid_str = "abc,def,ghi"
@@ -81,5 +86,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-

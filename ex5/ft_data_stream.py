@@ -45,9 +45,8 @@ def prime_numbers():
 def main():
     print("=== Game Data Stream Processor ===\n")
 
-    total_events = 1000  
+    total_events = 1000
     print(f"Processing {total_events} game events...\n")
-
 
     high_level_players = 0
     treasure_events = 0
