@@ -1,286 +1,134 @@
-FAQ – Python Module 03: Data Quest
+📘 FAQ – Python03 · Data Quest
 
-====================================
+Este documento recoge respuestas prácticas y técnicas a decisiones recurrentes tomadas durante el desarrollo del módulo Python03 – Data Quest.
 
-Este documento recoge aclaraciones conceptuales sobre el módulo
-Python Module 03 – Data Quest.
-Su objetivo es facilitar la comprensión del subject y apoyar la
-explicación durante la evaluación.
+No forma parte de la entrega oficial.
+Su objetivo es facilitar la defensa del código y justificar elecciones técnicas.
 
-No forma parte del código entregable.
+1. ¿Por qué existen varias soluciones válidas para un mismo ejercicio?
 
-1. ¿Qué es sys.argv?
+Python permite resolver un mismo problema mediante distintos enfoques, siempre que se respeten las reglas del subject.
 
-sys.argv es una lista que contiene los argumentos pasados al programa
-desde la línea de comandos.
+En este módulo he comprobado que soluciones diferentes pueden producir el mismo resultado correcto, y que la elección entre ellas suele depender de claridad, legibilidad y facilidad de explicación.
 
-El primer elemento (sys.argv[0]) es siempre el nombre del archivo
-ejecutado.
-Los elementos siguientes son los valores introducidos por la persona
-usuaria al ejecutar el programa.
+2. ¿Por qué usas if __name__ == "__main__" si el subject no lo exige?
 
-2. ¿Por qué sys.argv siempre tiene al menos un elemento?
+Aunque no es obligatorio, esta estructura:
 
-Porque Python incluye automáticamente el nombre del script ejecutado
-como primer argumento, incluso cuando no se pasan parámetros
-adicionales.
+deja explícito el punto de entrada del programa
 
-3. ¿Cómo sabe el programa qué debe hacer?
+mejora la legibilidad del flujo
 
-El programa interpreta su comportamiento a partir de los argumentos
-recibidos por la línea de comandos.
+evita ejecuciones accidentales al importar
 
-En este módulo, los argumentos representan directamente los datos
-a procesar (puntuaciones, coordenadas, eventos, etc.).
+facilita la reutilización de funciones
 
-4. ¿Por qué usar listas para procesar datos?
+La utilizo siempre que no entra en conflicto con el subject.
 
-Las listas son adecuadas para manejar datos secuenciales porque:
+3. ¿Por qué separas la lógica en una función main()?
 
-mantienen el orden de entrada
+Separar la lógica principal:
 
-permiten recorrer y procesar los elementos fácilmente
+mejora la organización del código
 
-facilitan el cálculo de estadísticas básicas
+facilita la lectura
 
-Por eso son ideales para análisis simples de datos recibidos por
-línea de comandos.
+permite controlar mejor el flujo de ejecución
 
-5. ¿Qué es enumerate() en Python?
+encaja naturalmente con if __name__ == "__main__"
 
-enumerate() es una función integrada de Python que permite recorrer
-una colección y obtener, al mismo tiempo:
+Aunque no sea obligatorio, no afecta al cumplimiento del subject.
 
-el índice
+4. ¿Por qué usas for en unos ejercicios y while en otros?
 
-el valor de cada elemento
+Ambos son válidos:
 
-En cada iteración devuelve un par (índice, valor).
+while es útil cuando se necesita control explícito
 
-6. ¿Por qué usar enumerate() en lugar de range(len())?
+for expresa mejor la intención cuando se itera sobre colecciones
 
-Porque enumerate():
+He priorizado for cuando mejora la claridad del código.
 
-mejora la legibilidad del código
+5. ¿Qué significa manejar errores de forma graceful?
 
-evita errores relacionados con índices
+Implica:
 
-expresa mejor la intención del recorrido
+capturar el error sin que el programa crashee
 
-Comparación:
+informar claramente
 
-for i in range(len(scores)):
-    print(i, scores[i])
+terminar o continuar de forma controlada
 
-for i, score in enumerate(scores):
-    print(i, score)
+He seguido estrictamente el comportamiento esperado por el subject.
 
+6. ¿Por qué usas unpacking de tuplas en lugar de indexación?
 
-La segunda forma es más clara y directa.
+El unpacking:
 
-7. ¿Para qué se usa enumerate() en este módulo?
+asigna significado semántico a los datos
 
-Se utiliza cuando es necesario:
+mejora la legibilidad
 
-numerar resultados
+evita errores de índice
 
-mostrar posiciones junto a valores
+facilita la explicación del código
 
-recorrer listas sin perder la referencia del índice
+Es especialmente útil con datos estructurados como coordenadas.
 
-En ejercicios de análisis de datos, enumerate() permite relacionar
-cada valor con su posición de forma explícita y ordenada.
+7. ¿Por qué usar set en Achievement Hunter?
 
-8. ¿Por qué usar try/except en este módulo?
+Porque los set:
 
-Porque la entrada de datos no siempre es válida.
+eliminan duplicados automáticamente
 
-El uso de try/except permite:
+permiten operaciones directas
 
-capturar errores sin que el programa se cierre
+simplifican el análisis
 
-mostrar mensajes claros a la persona usuaria
+Son ideales para trabajar con datos únicos.
 
-mantener un flujo de ejecución controlado
+8. ¿Por qué partir de set y no de listas con duplicados?
 
-Esto demuestra código robusto y consciente de errores.
+He priorizado claridad asumiendo datos ya normalizados.
+El enfoque alternativo también es válido; la elección depende del objetivo del ejercicio.
 
-9. ¿Qué significa manejar errores “sin que el programa crashee”?
+9. ¿Por qué usar \n dentro de print()?
 
-Significa que, aunque ocurra un error (por ejemplo, un valor no
-convertible a entero), el programa:
+Uso \n cuando el salto de línea forma parte del formato del mensaje y print() vacío para separar bloques lógicos.
 
-informa del problema
+10. ¿Por qué los diccionarios son clave en datos de juegos?
 
-termina de forma limpia y controlada
+Permiten:
 
-Este comportamiento cumple el requisito de graceful handling
-especificado en el módulo.
+acceso directo por clave
 
-10. ¿Qué es el unpacking en Python?
+modelar entidades complejas
 
-El unpacking (desempaquetado) es una forma de asignar los valores de
-una estructura iterable (como una tupla o una lista) a varias
-variables en una sola operación.
+asociar datos relacionados
 
-Ejemplo con una tupla de coordenadas:
+Son ideales para inventarios, estados y configuraciones.
 
-position = (3, 4, 0)
-x, y, z = position
+11. ¿Por qué generadores en Ex5?
 
+Porque permiten:
 
-Cada elemento de la tupla se asigna automáticamente a una variable
-distinta.
+procesamiento incremental
 
-11. ¿Por qué el unpacking es útil en este módulo?
+uso constante de memoria
 
-Porque permite trabajar con datos estructurados de forma clara y
-legible.
+simulación de flujos reales de datos
 
-En el ejercicio de coordenadas 3D:
+Son más adecuados que las listas para streaming.
 
-las posiciones se representan como tuplas
+12. ¿Qué has aprendido más allá de la sintaxis?
 
-el unpacking facilita acceder a cada componente (x, y, z)
+He aprendido a:
 
-evita accesos menos legibles como position[0], position[1], etc.
+leer el subject con precisión
 
-Esto mejora la claridad del código y refleja una intención explícita.
+priorizar soluciones simples y defendibles
 
-12. ¿Qué ocurre si el número de variables no coincide?
+justificar decisiones técnicas con claridad
 
-Python lanza un ValueError si el número de variables no coincide con
-el número de elementos del iterable.
 
-Ejemplo:
-
-position = (1, 2)
-x, y, z = position   # Error
-
-
-Esto refuerza que el unpacking es seguro y explícito: la estructura
-de los datos debe coincidir con lo que el programa espera.
-
-13. ¿Por qué usar tuplas para coordenadas?
-
-Las tuplas son adecuadas para representar coordenadas porque:
-
-agrupan datos relacionados (x, y, z)
-
-son inmutables, lo que evita modificaciones accidentales
-
-expresan claramente una posición fija en el espacio
-
-Esto encaja bien con el concepto de coordenadas en un sistema 3D.
-
-14. ¿Cómo se parsean coordenadas desde un string?
-
-Las coordenadas se reciben como strings en el formato "x,y,z".
-
-El proceso consiste en:
-
-separar los valores con split(",")
-
-convertir cada valor a entero con int()
-
-manejar posibles errores con try/except
-
-Este enfoque garantiza que solo se trabajará con datos válidos.
-
-15. ¿Por qué usar if __name__ == "__main__"?
-
-Esta estructura permite:
-
-separar la lógica del programa de su ejecución
-
-evitar ejecuciones accidentales al importar el archivo
-
-mejorar la claridad y reutilización del código
-
-Aunque no es estrictamente obligatorio, demuestra una práctica
-más profesional y escalable.
-
-16. ¿Qué se evalúa principalmente en este módulo?
-
-Se evalúa:
-
-la correcta interpretación de sys.argv
-
-el uso adecuado de estructuras de datos
-
-el manejo consciente de errores
-
-la claridad del código y de la lógica aplicada
-
-No se evalúa la complejidad, sino la comprensión.
-
-17. ¿Por qué cada ejercicio está en su propio archivo?
-
-Porque el subject exige que cada ejercicio sea independiente.
-
-Esto facilita:
-
-la lectura
-
-la evaluación
-
-la ejecución individual de cada programa
-
-18. ¿Qué es la distancia euclídea (3D) y cómo se calcula?
-
-La distancia euclídea es la distancia “en línea recta” entre dos
-puntos. En 3D se calcula aplicando la extensión del teorema de
-Pitágoras a los tres ejes (X, Y, Z).
-
-Para dos puntos:
-
-p1 = (x1, y1, z1)
-p2 = (x2, y2, z2)
-
-
-Desplazamientos:
-
-Δx = x2 - x1
-Δy = y2 - y1
-Δz = z2 - z1
-
-
-Cálculo:
-
-distancia = sqrt(Δx² + Δy² + Δz²)
-
-
-Ejemplo:
-
-p1 = (0, 0, 0)
-p2 = (3, 4, 0)
-
-distancia = sqrt(3² + 4² + 0²) = 5
-
-
-En el código, esta fórmula se implementa usando math.sqrt y
-unpacking de las tuplas para acceder a x, y y z.
-19. Why are tuples perfect for 3D coordinate data, and how does unpacking
-make the code more readable and powerful?
---------------------------------------------------------------------------
-
-Tuples are well suited for representing 3D coordinates because they group
-related values (x, y, z) in a fixed and ordered structure.
-
-Since tuples are immutable, once a coordinate is created it cannot be
-modified accidentally, which makes them ideal for representing positions
-in a coordinate system.
-
-Unpacking further improves readability by assigning each component of the
-tuple to a variable with clear semantic meaning:
-
-    position = (3, 4, 0)
-    x, y, z = position
-
-This avoids accessing values by index (position[0], position[1], etc.) and
-makes the intention of the code explicit.
-
-By combining tuples with unpacking, the code becomes easier to read,
-less error-prone, and more expressive when working with structured data
-such as 3D coordinates.
 

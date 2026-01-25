@@ -1,15 +1,20 @@
-Python Module 03 – Data Quest
+🐍 Python Module 03 – Data Quest
 
 This project is part of a structured Python learning curriculum.
 
-The goal of this module is to consolidate Python fundamentals through
-practical and progressive exercises, with a strong focus on
-understanding, clarity, and the ability to explain technical decisions
-during evaluation.
+The goal of Python Module 03 – Data Quest is to consolidate Python fundamentals through practical and progressive exercises, with a strong focus on:
 
-Each exercise is self-contained and designed to reinforce specific
-concepts related to data processing, program flow, and error handling
-in Python.
+understanding core concepts
+
+writing clear, readable code
+
+making conscious design decisions
+
+being able to explain those decisions clearly during evaluation
+
+Each exercise is self-contained and designed to reinforce specific concepts related to data processing, collections, program flow, and robust error handling in Python.
+
+The module prioritizes clarity, correctness, and explainability over complex or overengineered solutions.
 
 🎯 Objectives
 
@@ -23,9 +28,9 @@ Handle invalid input gracefully without crashing the program
 
 Write clear, readable, and well-structured code
 
-Develop the ability to explain design and implementation decisions
+Develop the ability to justify design and implementation decisions
 
-🧠 Topics covered
+🧠 Topics Covered
 
 Command-line arguments (sys.argv)
 
@@ -35,20 +40,24 @@ lists for sequential data processing
 
 tuples for structured and immutable data
 
+sets for uniqueness and analytics
+
+dictionaries for structured and labeled data
+
 Basic analytics (sum, average, min, max, range)
 
 Error handling with try / except
 
 Graceful program termination
 
-Unpacking of tuples
+Tuple unpacking for clarity and expressiveness
 
 Program execution flow and entry point
 
-Code clarity and readability
+Code clarity, readability, and explainability
 
-🧪 Exercises overview
-Exercise 0 – Command Quest
+🧪 Exercises Overview
+🧭 Exercise 0 – Command Quest
 
 Concepts: sys.argv, program execution flow, loops
 
@@ -62,10 +71,9 @@ handles the case where no arguments are given
 
 displays structured output following the subject specifications
 
-This exercise introduces how Python programs receive external input and
-how to manage basic command-line interaction.
+This exercise introduces how Python programs receive external input and how to manage basic command-line interaction.
 
-Exercise 1 – Score Analytics
+📊 Exercise 1 – Score Analytics
 
 Concepts: lists, basic statistics, try / except
 
@@ -79,10 +87,9 @@ computes basic statistics (total, average, min, max, range)
 
 handles invalid input gracefully without crashing
 
-This exercise reinforces why lists are suitable for sequential data
-processing and how to manage input errors in a controlled way.
+This exercise reinforces why lists are suitable for sequential data processing and how to manage input errors in a controlled and predictable way.
 
-Exercise 2 – Game Coordinate System
+📐 Exercise 2 – Game Coordinate System
 
 Concepts: tuples, unpacking, mathematical computation, error handling
 
@@ -98,39 +105,77 @@ handles invalid coordinate formats using exceptions
 
 demonstrates tuple unpacking for clarity and readability
 
-This exercise focuses on working with structured data and expressing
-intent clearly when accessing coordinate components.
+This exercise focuses on working with structured data and expressing intent clearly when accessing coordinate components.
 
-Exercise 3 – Achievement Tracker
+🏆 Exercise 3 – Achievement Tracker
 
-Concepts: dictionaries, iteration, structured data
+Concepts: sets, set operations, analytics
 
-A program that tracks and processes player achievements using key-value
-pairs, reinforcing the use of dictionaries for structured and labeled
-data.
+A program that tracks and analyzes player achievements using sets to:
 
-Exercise 4 – Inventory System
+automatically remove duplicates
 
-Concepts: data validation, collections, controlled updates
+compute all unique achievements
 
-An inventory management program that demonstrates how to update and
-validate stored data while maintaining program stability.
+find achievements common to multiple players
 
-Exercise 5 – Data Stream
+identify rare achievements
+
+This exercise highlights how union, intersection, and difference can be used to perform analytics without complex loops.
+
+🎒 Exercise 4 – Inventory Master
+
+Concepts: dictionaries, nested data structures, controlled updates
+
+An inventory management program that:
+
+models player inventories using nested dictionaries
+
+tracks item quantities, categories, rarity, and values
+
+calculates total inventory value and item count
+
+organizes items by category
+
+performs a controlled transaction between players
+
+produces a final analytics summary (most valuable player, most items, rarest items)
+
+This exercise demonstrates how dictionaries can model complex relationships while keeping the code readable and aligned with the subject.
+
+🌊 Exercise 5 – Data Stream
 
 Concepts: iteration, data processing, robustness
 
-A progressive data processing exercise focused on handling sequences of
-input data in a safe and predictable way.
+A progressive data processing exercise focused on:
 
-Exercise 6 – Analytics Dashboard
+iterating over sequences of input data
 
-Concepts: aggregation, formatting, code organization
+processing data incrementally
 
-A final exercise that brings together multiple concepts from the module
-to produce structured analytical output in a clear and readable format.
+handling edge cases safely
 
-🗂️ Project structure
+ensuring predictable and stable program behavior
+
+This exercise introduces a streaming-oriented way of thinking about data processing.
+
+📈 Exercise 6 – Analytics Dashboard
+
+Concepts: comprehensions, aggregation, formatting, code organization
+
+A final exercise that brings together multiple concepts from the module to:
+
+demonstrate list, dict, and set comprehensions
+
+aggregate and analyze data
+
+present structured analytical output
+
+reinforce clean organization and readability
+
+This exercise emphasizes clarity of intent and mastery of Python comprehensions.
+
+🗂️ Project Structure
 .
 ├── ex00/
 │   └── ft_command_quest.py
@@ -153,7 +198,7 @@ to produce structured analytical output in a clear and readable format.
 
 Each exercise can be executed independently from the project root.
 
-▶️ How to run
+▶️ How to Run
 
 From the root of the project:
 
@@ -164,9 +209,12 @@ python3 ex02/ft_coordinate_system.py
 
 All programs use only the Python standard library
 
-The output format follows the subject requirements
+The output format strictly follows the subject requirements
 
 No external dependencies are required
+
+The project prioritizes clarity, correctness, and explainability over overengineering
+
 
 
 
