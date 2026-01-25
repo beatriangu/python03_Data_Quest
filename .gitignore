@@ -1,96 +1,47 @@
-Python Module 03 – Data Quest
+# ==================================================
+# Python cache / compiled files
+# ==================================================
+__pycache__/
+*.py[cod]
+*$py.class
 
-This project is part of the Python curriculum.
+# ==================================================
+# Virtual environments (never part of submission)
+# ==================================================
+venv/
+.venv/
+.env/
 
-The goal of this module is to practice Python collections and data processing
-through a series of small, game-inspired command-line exercises.
-Each exercise focuses on handling input data, applying basic analytics,
-and producing structured output according to the subject specifications.
+# ==================================================
+# OS / Editor generated files
+# ==================================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
 
-Topics covered
+# ==================================================
+# Logs & temporary files
+# ==================================================
+*.log
+*.tmp
 
-Command-line arguments (sys.argv)
+# ==================================================
+# Personal learning / reflection files (NOT evaluated)
+# ==================================================
+FLO.txt
+FLO.md
+FLO_*.txt
+FLO_*.md
+learning_*.txt
+learning_*.md
+notes.txt
+notes.md
 
-Program execution flow
+# ==================================================
+# Testing tools & archives (provided but not submitted)
+# ==================================================
+data_quest_tools/
+data_quest_tools.tar.gz
 
-Lists and basic analytics
-
-Error handling with try/except
-
-Exercises completed
-Exercise 0 – Command Quest
-
-Concepts: sys.argv, command-line arguments, program execution flow
-
-A command-line program that:
-
-Reads arguments passed from the terminal
-
-Distinguishes between the program name and user-provided arguments
-
-Handles the case where no arguments are given
-
-Displays structured output following the subject specifications
-
-This exercise introduces how Python programs receive external input
-and how to manage basic command-line interaction.
-
-Exercise 1 – Score Cruncher
-
-Concepts: Lists, basic statistics, try/except
-
-A score analytics program that:
-
-Receives player scores from the command line
-
-Stores scores in a list
-
-Computes basic statistics (total, average, minimum, maximum and range)
-
-Handles invalid input gracefully without crashing
-
-This exercise demonstrates why lists are suitable for sequential data processing
-and how to manage common input errors in a controlled way.
-
-Project structure
-
-The project follows a simple and clear structure, where each exercise is
-self-contained in its own directory, as required by the subject.
-
-.
-├── ex00/
-│   └── ft_command_quest.py
-├── ex01/
-│   └── ft_score_analytics.py
-├── FAQ.txt
-└── README.md
-
-How to run
-
-From the root of the project, execute each exercise using:
-
-python3 ex00/ft_command_quest.py [arguments]
-python3 ex01/ft_score_analytics.py [scores]
-
-
-Examples:
-
-python3 ex00/ft_command_quest.py hello world
-python3 ex01/ft_score_analytics.py 1500 2300 1800 2100 1950
-
-Notes
-
-All programs use only the Python standard library.
-
-The output format strictly follows the subject requirements.
-
-No external dependencies are required.
-
-Status
-
-✅ Exercise 0 completed
-
-✅ Exercise 1 completed
-
-⏳ Further exercises will be added progressively
 

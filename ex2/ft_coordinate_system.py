@@ -5,20 +5,34 @@ import math
 
 
 def create_position(x: int, y: int, z: int) -> tuple:
+    """
+    Creates a 3D position represented as a tuple (x, y, z).
+    """
     return (x, y, z)
 
 
 def distance_3d(p1: tuple, p2: tuple) -> float:
+    """
+    Computes the Euclidean distance between two points in 3D space.
+    """
     x1, y1, z1 = p1
     x2, y2, z2 = p2
     return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2)
 
 
 def fmt_dist(p1: tuple, p2: tuple) -> float:
+    """
+    Returns the distance between two 3D points rounded to two decimals.
+    """
     return round(distance_3d(p1, p2), 2)
 
 
 def parse_coordinates(coord_str: str) -> tuple:
+    """
+    Parses a string in the format 'x,y,z' and returns a 3D position tuple.
+
+    Raises a ValueError if the format is invalid or values cannot be converted.
+    """
     parts = coord_str.split(",")
     if len(parts) != 3:
         raise ValueError("Coordinates must be in the format x,y,z")
@@ -26,6 +40,13 @@ def parse_coordinates(coord_str: str) -> tuple:
 
 
 def main() -> None:
+    """
+    Demonstrates a simple 3D coordinate system.
+
+    The program creates positions using tuples, computes the Euclidean
+    distance between points, parses coordinates from strings, handles
+    invalid input gracefully, and shows tuple unpacking in practice.
+    """
     print("=== Game Coordinate System ===")
     print()
 
@@ -60,4 +81,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 

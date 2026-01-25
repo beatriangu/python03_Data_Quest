@@ -4,10 +4,24 @@ import sys
 
 
 def main() -> None:
+    """
+    Reads player scores from the command line and displays basic statistics.
+
+    The program first checks whether any arguments are provided.
+    Each argument is then converted to an integer while handling
+    possible conversion errors using try/except.
+
+    Once the input data is validated, all calculations are performed
+    using the processed values instead of accessing sys.argv directly.
+    """
+
     print("=== Player Score Analytics ===")
 
     if len(sys.argv) == 1:
-        print("No scores provided. Usage: python3 ft_score_analytics.py <score1> <score2> ...")
+        print(
+            "No scores provided. Usage: "
+            "python3 ft_score_analytics.py <score1> <score2> ..."
+        )
         return
 
     scores = []
@@ -15,7 +29,7 @@ def main() -> None:
         try:
             scores.append(int(arg))
         except ValueError:
-            print(f"Oops, I typed '{arg}' instead of '1000'")
+            print(f"Invalid score: '{arg}' is not an integer")
             return
 
     total_players = len(scores)
