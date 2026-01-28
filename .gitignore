@@ -29,19 +29,19 @@ Thumbs.db
 # ==================================================
 # Personal learning / reflection files (NOT evaluated)
 # ==================================================
-FLO.txt
-FLO.md
-FLO_*.txt
-FLO_*.md
+MAP.md
 learning_*.txt
 learning_*.md
 notes.txt
 notes.md
 
 # ==================================================
+# Subject files / provided documentation (NOT submitted)
+# ==================================================
+en.subject.pdf
+
+# ==================================================
 # Testing tools & archives (provided but not submitted)
 # ==================================================
 data_quest_tools/
 data_quest_tools.tar.gz
-
-

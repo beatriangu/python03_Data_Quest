@@ -1,221 +1,246 @@
-🐍 Python Module 03 – Data Quest
+🐍 Python Garden — Data Quest
+Mastering Python Collections for Data Engineering
 
-This project is part of a structured Python learning curriculum.
+Repository: python03_data_quest
 
-The goal of Python Module 03 – Data Quest is to consolidate Python fundamentals through practical and progressive exercises, with a strong focus on:
+This repository is part of the Python Garden learning path and contains the exercises developed in Python Module 03 – Data Quest.
 
-understanding core concepts
+The purpose of this module is to master Python’s core collection types and learn how to apply them intentionally in data processing and analytics scenarios.
+The exercises are framed around game analytics and data engineering–style problems, but the concepts are fully transferable to real-world data pipelines.
 
-writing clear, readable code
+This module builds directly on:
 
-making conscious design decisions
+python00_basics (execution flow and functions)
 
-being able to explain those decisions clearly during evaluation
+python01_structures (object-oriented thinking)
 
-Each exercise is self-contained and designed to reinforce specific concepts related to data processing, collections, program flow, and robust error handling in Python.
+python02_data_guard (robust error handling)
+
+🎯 Module Objectives
+
+By completing this module, the learner is able to:
+
+Work confidently with command-line input using sys.argv
+
+Choose the appropriate Python data structure for a given problem
+
+Process and analyze data using:
+
+lists
+
+tuples
+
+sets
+
+dictionaries
+
+Apply basic analytics (sum, average, min, max, ranges)
+
+Use comprehensions for clear and expressive data transformations
+
+Handle invalid input gracefully without crashing
+
+Write code that is clear, readable, and easy to explain during evaluation
 
 The module prioritizes clarity, correctness, and explainability over complex or overengineered solutions.
 
-🎯 Objectives
-
-Apply core Python concepts through small, focused exercises
-
-Work with command-line input using sys.argv
-
-Process and analyze data using appropriate data structures
-
-Handle invalid input gracefully without crashing the program
-
-Write clear, readable, and well-structured code
-
-Develop the ability to justify design and implementation decisions
-
-🧠 Topics Covered
+🧠 Core Concepts Covered
 
 Command-line arguments (sys.argv)
 
-Python collections:
+Python collections and their intended use cases:
 
-lists for sequential data processing
+Lists for sequential and ordered data
 
-tuples for structured and immutable data
+Tuples for structured and immutable data
 
-sets for uniqueness and analytics
+Sets for uniqueness and analytics
 
-dictionaries for structured and labeled data
+Dictionaries for labeled and relational data
 
-Basic analytics (sum, average, min, max, range)
+Basic statistics and aggregation
 
 Error handling with try / except
 
-Graceful program termination
+Tuple unpacking
 
-Tuple unpacking for clarity and expressiveness
+Iteration patterns
+
+Generators and streaming data processing
+
+List, dict, and set comprehensions
 
 Program execution flow and entry point
 
-Code clarity, readability, and explainability
+🧪 Exercises Overview & Learning Progression
 
-🧪 Exercises Overview
-🧭 Exercise 0 – Command Quest
+Each exercise introduces a new data structure or processing pattern, building progressively toward more expressive and efficient data handling.
 
-Concepts: sys.argv, program execution flow, loops
+ex0 — Command Quest
 
-A command-line program that:
+Concepts: sys.argv, execution flow, loops
 
-reads arguments passed from the terminal
+Reads arguments passed from the terminal
 
-distinguishes between the script name and user-provided arguments
+Distinguishes between program name and user arguments
 
-handles the case where no arguments are given
+Handles the case where no arguments are provided
 
-displays structured output following the subject specifications
+Displays structured output following subject specifications
 
-This exercise introduces how Python programs receive external input and how to manage basic command-line interaction.
+📌 Focus: understanding how programs receive and interpret external input.
 
-📊 Exercise 1 – Score Analytics
+ex1 — Score Analytics
 
 Concepts: lists, basic statistics, try / except
 
-A score analysis program that:
+Receives numeric scores from the command line
 
-receives player scores from the command line
+Stores valid data in a list
 
-stores valid scores in a list
+Computes total, average, min, max, and range
 
-computes basic statistics (total, average, min, max, range)
+Handles invalid input gracefully
 
-handles invalid input gracefully without crashing
+📌 Focus: why lists are ideal for sequential data processing.
 
-This exercise reinforces why lists are suitable for sequential data processing and how to manage input errors in a controlled and predictable way.
-
-📐 Exercise 2 – Game Coordinate System
+ex2 — Game Coordinate System
 
 Concepts: tuples, unpacking, mathematical computation, error handling
 
-A coordinate system program that:
+Represents 3D positions using tuples
 
-represents 3D positions using tuples
+Calculates Euclidean distance between points
 
-calculates Euclidean distance between two points
+Parses coordinates from strings
 
-parses coordinates from strings
+Uses tuple unpacking for clarity
 
-handles invalid coordinate formats using exceptions
+📌 Focus: working with structured, immutable data.
 
-demonstrates tuple unpacking for clarity and readability
-
-This exercise focuses on working with structured data and expressing intent clearly when accessing coordinate components.
-
-🏆 Exercise 3 – Achievement Tracker
+ex3 — Achievement Tracker
 
 Concepts: sets, set operations, analytics
 
-A program that tracks and analyzes player achievements using sets to:
+Tracks unique achievements per player
 
-automatically remove duplicates
+Computes:
 
-compute all unique achievements
+all unique achievements
 
-find achievements common to multiple players
+shared achievements
 
-identify rare achievements
+rare achievements
 
-This exercise highlights how union, intersection, and difference can be used to perform analytics without complex loops.
+Uses union, intersection, and difference
 
-🎒 Exercise 4 – Inventory Master
+📌 Focus: analytics without complex loops using set operations.
 
-Concepts: dictionaries, nested data structures, controlled updates
+ex4 — Inventory Master
 
-An inventory management program that:
+Concepts: dictionaries, nested structures, controlled updates
 
-models player inventories using nested dictionaries
+Models inventories with nested dictionaries
 
-tracks item quantities, categories, rarity, and values
+Tracks quantities, categories, rarity, and values
 
-calculates total inventory value and item count
+Computes total inventory value and item counts
 
-organizes items by category
+Performs controlled transactions
 
-performs a controlled transaction between players
+Produces analytical summaries
 
-produces a final analytics summary (most valuable player, most items, rarest items)
+📌 Focus: modeling complex relationships with dictionaries.
 
-This exercise demonstrates how dictionaries can model complex relationships while keeping the code readable and aligned with the subject.
+ex5 — Data Stream
 
-🌊 Exercise 5 – Data Stream
+Concepts: iteration, generators, streaming data
 
-Concepts: iteration, data processing, robustness
+Processes data incrementally using generators
 
-A progressive data processing exercise focused on:
+Avoids storing large datasets in memory
 
-iterating over sequences of input data
+Demonstrates streaming-oriented thinking
 
-processing data incrementally
+Handles edge cases safely
 
-handling edge cases safely
+📌 Focus: memory-efficient data processing.
 
-ensuring predictable and stable program behavior
+ex6 — Analytics Dashboard
 
-This exercise introduces a streaming-oriented way of thinking about data processing.
+Concepts: comprehensions, aggregation, formatting
 
-📈 Exercise 6 – Analytics Dashboard
+Demonstrates:
 
-Concepts: comprehensions, aggregation, formatting, code organization
+list comprehensions
 
-A final exercise that brings together multiple concepts from the module to:
+dict comprehensions
 
-demonstrate list, dict, and set comprehensions
+set comprehensions
 
-aggregate and analyze data
+Aggregates and analyzes data
 
-present structured analytical output
+Produces structured analytical output
 
-reinforce clean organization and readability
-
-This exercise emphasizes clarity of intent and mastery of Python comprehensions.
+📌 Focus: expressive, readable data transformations.
 
 🗂️ Project Structure
 .
-├── ex00/
+├── ex0/
 │   └── ft_command_quest.py
-├── ex01/
+├── ex1/
 │   └── ft_score_analytics.py
-├── ex02/
+├── ex2/
 │   └── ft_coordinate_system.py
-├── ex03/
+├── ex3/
 │   └── ft_achievement_tracker.py
-├── ex04/
+├── ex4/
 │   └── ft_inventory_system.py
-├── ex05/
+├── ex5/
 │   └── ft_data_stream.py
-├── ex06/
+├── ex6/
 │   └── ft_analytics_dashboard.py
 ├── README.md
-├── FAQ.txt
-└── FLO.txt
+└── .gitignore
 
 
-Each exercise can be executed independently from the project root.
+Each exercise is self-contained and can be executed independently.
 
 ▶️ How to Run
 
 From the root of the project:
 
-python3 ex01/ft_score_analytics.py 1500 2300 1800
-python3 ex02/ft_coordinate_system.py
+python3 ex1/ft_score_analytics.py 1500 2300 1800
+python3 ex2/ft_coordinate_system.py
 
 📌 Notes
 
-All programs use only the Python standard library
+Only the Python standard library is used
 
-The output format strictly follows the subject requirements
+Output format strictly follows the subject specifications
 
-No external dependencies are required
+No external dependencies
 
-The project prioritizes clarity, correctness, and explainability over overengineering
+Learning-only documentation (FAQ, MAP, FLO) is intentionally excluded
 
+The repository reflects conscious design choices, not trial-and-error code
 
+🚀 Conclusion
+
+Data Quest is a foundational module for data-oriented thinking in Python.
+
+It teaches not only how to use Python collections, but when and why to use each one.
+By the end of the module, the learner can reason clearly about data structures, processing patterns, and analytics design.
+
+This module prepares the ground for:
+
+File and stream processing
+
+Larger data pipelines
+
+Backend and data engineering workflows
+
+📌 Module completed — Python Garden · Data Quest 🐍
 
 
 
